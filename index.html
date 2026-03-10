@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, My Sister ♡</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="page-frame">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+    </div>
+
+    <div class="slide-indicator" id="slideIndicator">
+        <span id="currentNum">01</span>
+        <span class="indicator-line"></span>
+        <span id="totalNum">10</span>
+    </div>
+
+    <!-- ============= ALL SLIDES ============= -->
+    <main class="slides" id="slidesContainer">
+
+        <!-- 1. TITLE -->
+        <section class="slide active" id="s0">
+            <div class="slide-inner center-layout">
+                <span class="sparkle-icon anim">✧</span>
+                <h1 class="hero-title anim d1">For You,<br><span class="script-text">My Sister</span></h1>
+                <p class="hero-subtitle anim d2">Some words I've been holding in my heart<br>for someone who means the world to me.</p>
+                <div class="scroll-cue anim d3">
+                    <span>tap to begin</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. DEAR SISTER + img1 -->
+        <section class="slide" id="s1">
+            <div class="slide-inner split-layout">
+                <div class="photo-card">
+                    <img src="images/img1.png" alt="Memory">
+                    <div class="photo-tape"></div>
+                </div>
+                <div class="text-side">
+                    <span class="chapter anim">01 — My Dear Sister</span>
+                    <p class="letter-text anim d1">If I could go back in time, I would not change a single moment we spent together.</p>
+                    <p class="letter-text anim d2">You weren't just a classmate — you became my sister. The kind of bond that school gave us was something most people search for their whole lives. And I was lucky enough to find it in you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MEMORIES + img2 -->
+        <section class="slide" id="s2">
+            <div class="slide-inner split-layout reverse">
+                <div class="text-side">
+                    <span class="chapter anim">02 — Our Memories</span>
+                    <p class="letter-text anim d1">Remember those school days? The laughter between classes, the silly inside jokes no one else understood, the way we always found each other in a crowd?</p>
+                    <p class="letter-text anim d2">Those weren't just school days — they were the most beautiful chapter of my life. And you were on every single page.</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/img2.png" alt="Memory">
+                    <div class="photo-tape"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. WHAT YOU TAUGHT ME (NEW) -->
+        <section class="slide" id="s3">
+            <div class="slide-inner center-layout">
+                <span class="chapter anim">03 — What You Taught Me</span>
+                <div class="card-grid anim d1">
+                    <div class="value-card">
+                        <span class="card-icon">🤍</span>
+                        <h3>Kindness</h3>
+                        <p>You showed me that being kind is never a weakness — it's the bravest thing a person can do.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="card-icon">🌙</span>
+                        <h3>Patience</h3>
+                        <p>You waited for me when I felt alone. You stood by me when others walked away.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="card-icon">🌸</span>
+                        <h3>Love</h3>
+                        <p>You taught me that friendship can feel like family — sometimes even deeper.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. GRATITUDE + img3 -->
+        <section class="slide" id="s4">
+            <div class="slide-inner split-layout">
+                <div class="photo-card">
+                    <img src="images/img3.png" alt="Memory">
+                    <div class="photo-tape"></div>
+                </div>
+                <div class="text-side">
+                    <span class="chapter anim">04 — Thank You</span>
+                    <p class="letter-text anim d1">Thank you — for every moment you chose to stay when you didn't have to.</p>
+                    <p class="letter-text anim d2">For listening when I had no one else to talk to. For understanding my silence. For making me feel like I mattered — even on the days when I didn't believe it myself.</p>
+                    <p class="letter-text highlight anim d3">You deserve the world. And I'm sorry if I never told you that.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. THINGS I'LL MISS (NEW - SURPRISE) -->
+        <section class="slide" id="s5">
+            <div class="slide-inner center-layout">
+                <span class="chapter anim">05 — Things I'll Miss</span>
+                <div class="miss-list anim d1">
+                    <div class="miss-item"><span>☕</span> Our late-night conversations</div>
+                    <div class="miss-item"><span>😂</span> Your laugh that could light up a room</div>
+                    <div class="miss-item"><span>🤗</span> The way you always knew when I was pretending to be okay</div>
+                    <div class="miss-item"><span>💪</span> Your strength that inspired me silently</div>
+                    <div class="miss-item"><span>🏫</span> Walking through those school corridors together</div>
+                    <div class="miss-item"><span>❤️</span> Having a sister like you in my life</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. IF WE NEVER MEET AGAIN -->
+        <section class="slide" id="s6">
+            <div class="slide-inner center-layout">
+                <span class="chapter anim">06 — If We Never Meet Again</span>
+                <p class="letter-text center-text anim d1">Life has a way of pulling people apart — slowly, quietly, without warning.</p>
+                <p class="letter-text center-text anim d2">But even if I wake up one day and realize that we may never sit together again, never laugh together again, never share a meal again —</p>
+                <p class="big-quote anim d3">"You will live in a part of me that<br>time can never touch."</p>
+            </div>
+        </section>
+
+        <!-- 8. PROMISES (NEW - SURPRISE) -->
+        <section class="slide" id="s7">
+            <div class="slide-inner center-layout">
+                <span class="chapter anim">07 — My Promises To You</span>
+                <div class="promises anim d1">
+                    <div class="promise-item">
+                        <div class="promise-num">I</div>
+                        <p>I promise to always pray for your happiness — even from a distance.</p>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-num">II</div>
+                        <p>I promise to carry our memories like treasures, never letting them fade.</p>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-num">III</div>
+                        <p>I promise that no matter what happens, you will never lose me — your friend, your school brother, your family by choice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FINAL WISH + img4 -->
+        <section class="slide" id="s8">
+            <div class="slide-inner split-layout reverse">
+                <div class="text-side">
+                    <span class="chapter anim">08 — My Last Wish</span>
+                    <p class="letter-text anim d1">School may be over, and life may take us in different directions — but what we shared was never just about school.</p>
+                    <p class="letter-text anim d2">I will forever wish you mornings that feel gentle, nights that bring you peace, and a life full of everything you truly deserve.</p>
+                    <p class="letter-text anim d3">Take care of yourself. Keep smiling — the world needs your light.</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/img4.png" alt="Memory">
+                    <div class="photo-tape"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. ENDING -->
+        <section class="slide" id="s9">
+            <div class="slide-inner center-layout">
+                <div class="final-heart anim">♡</div>
+                <h2 class="final-text anim d1">You will always be my sister,<br>and I will always be proud of you.</h2>
+                <div class="final-divider anim d2"></div>
+                <p class="final-signoff anim d2">With all the love I could never say out loud,</p>
+                <p class="final-name anim d3">— Your School Brother, Always & Forever</p>
+                <p class="final-date anim d3">Written with love • March 2026</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Nav dots -->
+    <div class="nav-dots" id="navDots"></div>
+
+    <!-- Arrows -->
+    <button class="arrow arrow-left hidden" id="prevBtn" aria-label="Previous">‹</button>
+    <button class="arrow arrow-right" id="nextBtn" aria-label="Next">›</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
